@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luz Angelical - Sanación y Guía Espiritual</title>
+
+    <!-- FUENTES Y LIBRERÍAS DE ICONOS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ARCHIVO CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Luz Angelical ✨</a>
+        <nav>
+            <a href="index.html" class="active">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- SECCIÓN HERO -->
+        <section class="hero">
+            <h1>Sana tu Alma, Conecta con tus Ángeles</h1>
+            <p>Un espacio sagrado para reencontrar tu paz interior, comprender la voz de los astros y recibir guía divina en cada paso de tu camino.</p>
+            <a href="servicios.html" class="btn">Ver Catálogo de Servicios ✨</a>
+        </section>
+
+        <!-- BANNER DE REDES SOCIALES -->
+        <div class="social-banner">
+            <a href="https://www.tiktok.com/@juliethredondo?_r=1&_t=ZS-9A3rI6b6MM8" target="_blank" class="social-card tiktok">
+                <div class="social-icon">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <div class="social-text">
+                    <strong>Sígueme en TikTok</strong>
+                    <span>✨ Mensajes angelicales e inspiración diaria</span>
+                </div>
+            </a>
+
+            <a href="https://www.instagram.com/juliethr6?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="social-card instagram">
+                <div class="social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="social-text">
+                    <strong>Instagram Oficial</strong>
+                    <span>🌸 Conoce más de mi día a día y espiritualidad</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- SECCIÓN INTERACTIVA DEL ZODÍACO -->
+        <div class="horoscopo-box">
+            <h2 class="section-title">Mensaje del Ángel según tu Signo ✨</h2>
+            <p class="section-subtitle">Haz clic en tu signo zodiacal para recibir tu mensaje de hoy.</p>
+
+            <div class="zodiac-grid" id="zodiac-grid"></div>
+
+            <div class="oraculo-result">
+                <p class="oraculo-quote" id="oraculo-texto">"Selecciona tu signo para revelar tu mensaje divino..."</p>
+                <span class="oraculo-hint" id="oraculo-autor">✨ Luz Angelical</span>
+            </div>
+        </div>
+
+        <!-- PILARES DE SERVICIOS -->
+        <h2 class="section-title">¿Cómo te puedo acompañar?</h2>
+        <p class="section-subtitle">Toca cualquier servicio para conocer más detalles y agendar directamente.</p>
+
+        <div class="services-grid">
+            <div class="service-card" onclick="openModal('Canalización Divina', '🎴', 'Una sesión intuitiva en la que conectamos con tus guías y ángeles para recibir respuestas claras sobre amor, propósito de vida y decisiones difíciles.', 'Duración: variable | Incluye lectura de cartas angelicales y audio grabado de la sesión.', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">🎴</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Canalización Divina</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Mensajes claros y amorosos de tus seres de luz para tomar decisiones acertadas en tu vida personal y sentimental.</p>
+            </div>
+
+            <div class="service-card" onclick="openModal('Armonización Holística', '🕊️', 'Limpieza profunda del campo energético y alineación de chakras mediante técnicas de imposición de manos, aromaterapia y cuencos.', 'Duración: variable | Ideal para momentos de alto estrés, ansiedad o bloqueo emocional.', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">🕊️</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Armonización Holística</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Libera cargas del pasado, equilibra tus chakras y renueva tu energía para vivir en profunda paz interior.</p>
+            </div>
+
+            <div class="service-card" onclick="openModal('Sabiduría Astrológica', '⭐', 'Análisis detallado de tu carta astral natal para comprender tus talentos innatos, patrones de relación y el clima astral que vives hoy.', 'Duración: variable | Requiere tu fecha, hora exacta y ciudad de nacimiento.', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">⭐</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Sabiduría Astrológica</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Comprende tu mapa celestial natal para potenciar tus dones naturales y aprovechar las oportunidades del destino.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL / FLOTANTE -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModalOnOverlay(event)">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-icon" id="modal-icon">✨</div>
+            <h3 class="modal-title" id="modal-title">Título Servicio</h3>
+            <p class="modal-desc" id="modal-desc">Descripción detallada...</p>
+            <div class="modal-details" id="modal-details">Detalles adicionales...</div>
+            <a href="#" id="modal-wa-btn" target="_blank" class="btn btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Luz Angelical — Sanación y Guía Espiritual ✨</p>
+    </footer>
+
+    <!-- SCRIPTS EN CARPETA JS -->
+    <script src="js/main.js"></script>
+    <script src="js/inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios y Lecturas - Luz Angelical</title>
+
+    <!-- FUENTES Y LIBRERÍAS DE ICONOS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ARCHIVO CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Luz Angelical ✨</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html" class="active">Servicios</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="section-title">Catálogo de Servicios Espirituales</h1>
+        <p class="section-subtitle">Selecciona el servicio que resuene con tu momento presente para ver más detalles y solicitar tu cita.</p>
+
+        <div class="services-grid">
+
+            <!-- 1. TAROT ANGELICAL -->
+            <div class="service-card" onclick="openModal('Lectura de Tarot Angelical', '🎴', 'Sesión profunda para explorar el amor, trabajo y salud a través de las cartas de los ángeles. Identifica bloqueos y recibe orientación clara.', 'Modalidad: Presencial o Virtual | Tiempo: variable. | Valor: $90.000 COP', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">🎴</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Tarot Angelical</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Orientación divina y revelación de situaciones actuales a través del tarot angelical.</p>
+                <span style="display: inline-block; margin-top: 0.8rem; font-weight: 600; color: var(--primary);">$90.000 COP</span>
+            </div>
+
+            <!-- 2. ALINEACIÓN DE CHAKRAS -->
+            <div class="service-card" onclick="openModal('Limpieza y Alineación de Chakras', '🌿', 'Elimina energías estancadas, restaura la vitalidad y equilibra los 7 centros energéticos principales mediante cristales, cuencos y péndulo.', 'Modalidad: Presencial o Virtual | Tiempo: variable. | Valor: $110.000 COP', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">🌿</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Alineación de Chakras</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Limpieza energética profunda para recuperar la armonía mental, física y emocional.</p>
+                <span style="display: inline-block; margin-top: 0.8rem; font-weight: 600; color: var(--primary);">$110.000 COP</span>
+            </div>
+
+            <!-- 3. CARTA ASTRAL NATAL -->
+            <div class="service-card" onclick="openModal('Carta Astral y Revolución Solar', '🌙', 'Conoce las fortalezas de tu alma al nacer y descubre las proyecciones energéticas para tu nuevo año de vida. Incluye informe detallado.', 'Modalidad: Presencial o Virtual | Tiempo: variable. | Valor: $140.000 COP', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">🌙</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Carta Astral Natal</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Mapa completo de las influencias planetarias en tu vida, dones y propósito cósmico.</p>
+                <span style="display: inline-block; margin-top: 0.8rem; font-weight: 600; color: var(--primary);">$140.000 COP</span>
+            </div>
+
+            <!-- 4. SANACIÓN REIKI -->
+            <div class="service-card" onclick="openModal('Terapia de Sanación Reiki', '✨', 'Transmisión de energía universal para promover la autosanación del cuerpo, reducir el estrés y calmar la mente de cargas acumuladas.', 'Modalidad: Presencial o Virtual | Tiempo: variable. | Valor: $100.000 COP', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">✨</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Sanación Reiki</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Canalización de luz para aliviar cargas emocionales y restaurar la paz espiritual.</p>
+                <span style="display: inline-block; margin-top: 0.8rem; font-weight: 600; color: var(--primary);">$100.000 COP</span>
+            </div>
+
+            <!-- 5. REGISTROS AKÁSHICOS -->
+            <div class="service-card" onclick="openModal('Lectura de Registros Akáshicos', '📜', 'Accede a la memoria del alma para comprender patrones repetitivos, votos del pasado, karma y el propósito divino de tu encarnación.', 'Modalidad: Presencial o Virtual | Tiempo: variable. | Valor: $130.000 COP', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">📜</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Registros Akáshicos</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Consulta el libro sagrado de tu alma para sanar bloqueos y comprender tu destino.</p>
+                <span style="display: inline-block; margin-top: 0.8rem; font-weight: 600; color: var(--primary);">$130.000 COP</span>
+            </div>
+
+            <!-- 6. CANALIZACIÓN CON ÁNGELES -->
+            <div class="service-card" onclick="openModal('Canalización con Ángeles y Guías', '🕊️', 'Recibe mensajes directos de tus guías espirituales y arcángeles. Una sesión reconfortante llena de claridad, contención y amor divino.', 'Modalidad: Presencial o Virtual | Tiempo: variable. | Valor: $95.000 COP', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">🕊️</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Canalización con Guías</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Conexión directa con tus seres de luz para recibir mensajes de paz y dirección.</p>
+                <span style="display: inline-block; margin-top: 0.8rem; font-weight: 600; color: var(--primary);">$95.000 COP</span>
+            </div>
+
+            <!-- 7. LIMPIEZA AURICA Y CORTE DE LAZOS -->
+            <div class="service-card" onclick="openModal('Corte de Lazos Energéticos y Limpieza Aúrica', '🔮', 'Corta cordones etéricos con parejas pasadas o personas tóxicas. Libera energías pesadas adheridas a tu campo aúrico.', 'Modalidad: Presencial o Virtual | Tiempo: variable. | Valor: $120.000 COP', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">🔮</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Corte de Lazos Energéticos</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Liberación de apegos y energías estancadas de relaciones pasadas o entornos tóxicos.</p>
+                <span style="display: inline-block; margin-top: 0.8rem; font-weight: 600; color: var(--primary);">$120.000 COP</span>
+            </div>
+
+            <!-- 8. SANACIÓN HOLÍSTICA INTENSIVA -->
+            <div class="service-card" onclick="openModal('Sesión Holística Integral', '💎', 'Sesión completa que combina lectura rápida de cartas, alineación de chakras, aromaterapia y transmisión de Reiki.', 'Modalidad: Presencial o Virtual | Tiempo: variable. | Valor: $160.000 COP', '573209158377')">
+                <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">💎</div>
+                <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--primary); margin-bottom: 0.5rem;">Sesión Holística Integral</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Experiencia completa que combina tarot, equilibrio energético y Reiki expansivo.</p>
+                <span style="display: inline-block; margin-top: 0.8rem; font-weight: 600; color: var(--primary);">$160.000 COP</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL / FLOTANTE -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModalOnOverlay(event)">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-icon" id="modal-icon">✨</div>
+            <h3 class="modal-title" id="modal-title">Título Servicio</h3>
+            <p class="modal-desc" id="modal-desc">Descripción detallada...</p>
+            <div class="modal-details" id="modal-details">Detalles adicionales...</div>
+            <a href="#" id="modal-wa-btn" target="_blank" class="btn btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Luz Angelical — Sanación y Guía Espiritual ✨</p>
+    </footer>
+
+    <!-- SCRIPT EN CARPETA JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

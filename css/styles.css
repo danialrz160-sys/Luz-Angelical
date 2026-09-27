@@ -1,0 +1,359 @@
+:root {
+    --primary: #7b2cbf;
+    --primary-light: #9d4edd;
+    --primary-grad: linear-gradient(135deg, #7b2cbf 0%, #1c171a 100%);
+    --accent: #f4bdd6;
+    --bg-light: #faf7fc;
+    --card-bg: #ffffff;
+    --text-color: #2b2d42;
+    --text-muted: #6c757d;
+    --radius: 20px;
+    --shadow: 0 10px 30px rgba(123, 44, 191, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: 
+        radial-gradient(at 10% 10%, rgba(123, 44, 191, 0.05) 0px, transparent 50%),
+        radial-gradient(at 90% 90%, rgba(247, 37, 133, 0.05) 0px, transparent 50%);
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* HEADER Y NAVEGACIÓN */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary);
+    background: rgba(123, 44, 191, 0.08);
+}
+
+/* HERO Y TÍTULOS */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: radial-gradient(circle at center, rgba(123, 44, 191, 0.08) 0%, transparent 70%);
+    border-radius: var(--radius);
+    margin-bottom: 2.5rem;
+}
+
+.hero h1, .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    background: var(--primary-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.hero p, .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    background: var(--primary-grad);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 15px rgba(123, 44, 191, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(123, 44, 191, 0.4);
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+.btn-whatsapp:hover {
+    background: #1eb854;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* BANNER REDES SOCIALES */
+.social-banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-4px);
+}
+
+.social-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.social-card.tiktok .social-icon { background: #000; }
+.social-card.instagram .social-icon { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+.social-text strong { display: block; font-size: 1rem; }
+.social-text span { font-size: 0.82rem; color: var(--text-muted); }
+
+/* HORÓSCOPO INTERACTIVO */
+.horoscopo-box {
+    background: white;
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+    text-align: center;
+    border: 2px solid rgba(123, 44, 191, 0.1);
+}
+
+.zodiac-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.2rem;
+    margin: 2rem 0;
+}
+
+.zodiac-card {
+    background: var(--bg-light);
+    padding: 1.2rem 0.8rem;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zodiac-card:hover, .zodiac-card.active {
+    border-color: var(--accent);
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(247, 37, 133, 0.2);
+    transform: translateY(-4px);
+}
+
+.zodiac-icon { font-size: 2.2rem; margin-bottom: 0.3rem; }
+.zodiac-name { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+.zodiac-dates { font-size: 0.75rem; color: var(--text-muted); }
+
+.oraculo-result {
+    min-height: 110px;
+    background: radial-gradient(circle at center, rgba(123, 44, 191, 0.05) 0%, rgba(247, 37, 133, 0.05) 100%);
+    border: 2px dashed var(--primary);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.oraculo-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: var(--primary);
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.oraculo-hint {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* TARJETAS DE SERVICIOS */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.service-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(123, 44, 191, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(123, 44, 191, 0.15);
+    border-color: var(--primary-light);
+}
+
+.service-card::after {
+    content: "Haz clic para ver más ✨";
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.82rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* MODAL / FLOTANTE */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.modal-icon { font-size: 3rem; margin-bottom: 0.5rem; }
+.modal-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--primary); margin-bottom: 0.8rem; }
+.modal-desc { color: var(--text-color); font-size: 0.98rem; line-height: 1.6; margin-bottom: 1rem; }
+.modal-details { background: var(--bg-light); padding: 1rem; border-radius: 12px; font-size: 0.88rem; color: var(--text-muted); }
+
+/* PARTÍCULAS DE ESTRELLITAS */
+.star-particle {
+    position: fixed;
+    pointer-events: none;
+    font-size: 1.2rem;
+    animation: floatUp 1s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes floatUp {
+    0% { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
+    100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(0.3) rotate(180deg); }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
