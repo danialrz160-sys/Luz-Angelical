@@ -357,3 +357,15 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+/* Estilos normales (para computadoras) */
+.contenedor {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Regla para celulares (pantallas de 768px o menos) */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column; /* Cambia a vertical */
+  }
+}
